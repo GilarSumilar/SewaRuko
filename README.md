@@ -11,7 +11,7 @@ Kelompok 5
 
 | File | Link                              |
 | --------   | --------------------------------------------------- |
-| LAPORAN  | [Link]() |
+| LAPORAN  | [Link](https://drive.google.com/file/d/15m27R64ea5enob7b_i7tNP7a6grJ_RVU/view?usp=sharing) |
 | YOUTUBE  | [Link]() |
 
 
