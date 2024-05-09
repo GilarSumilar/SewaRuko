@@ -1,6 +1,6 @@
 # SewaRuko.com
 
-# Profil Mahasiswa
+# Profil Mahasiswa :
 ```
 Kelompok 5
 - M. Daffa Maulana Arrasyid (312210335)
