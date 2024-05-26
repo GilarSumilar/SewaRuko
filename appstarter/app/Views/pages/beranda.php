@@ -24,62 +24,20 @@
 <div class="testimoni mt-5">
     <h3>Kata Mereka</h3>
     <div class="testimoni-list__card">
-        <div class="testimoni-card mt-3">
-            <div class="testimoni-card__photo">
-                <img src="<?= base_url('/images/person.jpg') ?>" alt="" width="100" height="100">
-                <div class="testimono-card__username__star">
-                    <h6>username</h6>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+        <?php foreach ($testimoni as $testi) : ?>
+            <div class="testimoni-card mt-3">
+                <div class="testimoni-card__photo">
+                    <img src="<?= base_url('/images/person.jpg') ?>" alt="" width="100" height="100">
+                    <div class="testimono-card__username__star">
+                        <h6><?= $testi['username'] ?></h6>
+                        <?php for ($i = 0; $i < 5; $i++) : ?>
+                            <i class="<?= ($testi['rating'] > $i) ? 'fa-solid' : 'fa-regular' ?> fa-star"></i>
+                        <?php endfor ?>
+                    </div>
                 </div>
+                <p>"<?= $testi['description'] ?>"</p>
             </div>
-            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, cumque dolore maxime velit ipsa corrupti! Quia veniam beatae cum velit porro ullam sint! Fugit, nostrum!"</p>
-        </div>
-        <div class="testimoni-card mt-3">
-            <div class="testimoni-card__photo">
-                <img src="<?= base_url('/images/person.jpg') ?>" alt="" width="100" height="100">
-                <div class="testimono-card__username__star">
-                    <h6>username</h6>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-            </div>
-            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, cumque dolore maxime velit ipsa corrupti! Quia veniam beatae cum velit porro ullam sint! Fugit, nostrum!"</p>
-        </div>
-        <div class="testimoni-card mt-3">
-            <div class="testimoni-card__photo">
-                <img src="<?= base_url('/images/person.jpg') ?>" alt="" width="100" height="100">
-                <div class="testimono-card__username__star">
-                    <h6>username</h6>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-            </div>
-            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, cumque dolore maxime velit ipsa corrupti! Quia veniam beatae cum velit porro ullam sint! Fugit, nostrum!"</p>
-        </div>
-        <div class="testimoni-card mt-3">
-            <div class="testimoni-card__photo">
-                <img src="<?= base_url('/images/person.jpg') ?>" alt="" width="100" height="100">
-                <div class="testimono-card__username__star">
-                    <h6>username</h6>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-            </div>
-            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, cumque dolore maxime velit ipsa corrupti! Quia veniam beatae cum velit porro ullam sint! Fugit, nostrum!"</p>
-        </div>
+        <?php endforeach ?>
     </div>
 </div>
 <?= $this->endSection() ?>
