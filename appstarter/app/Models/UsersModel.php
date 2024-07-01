@@ -7,14 +7,53 @@ use CodeIgniter\Model;
 class UsersModel extends Model
 {
     protected $table            = 'users';
-    protected $allowedFields    = ['id', 'username', 'password', 'email', 'no_hp'];
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    protected $protectFields    = true;
+    protected $allowedFields    = ['status'];
 
-    public function getUsers($id = false)
-    {
-        if ($id == false) {
-            return $this->findAll();
-        }
+    protected bool $allowEmptyInserts = false;
+    protected bool $updateOnlyChanged = true;
 
-        return $this->where('id', $id);
-    }
+    protected array $casts = [];
+    protected array $castHandlers = [];
+
+    // Dates
+    protected $useTimestamps = false;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
+
+    // Validation
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
+    protected $cleanValidationRules = true;
+
+    // Callbacks
+    protected $allowCallbacks = true;
+    protected $beforeInsert   = [];
+    protected $afterInsert    = [];
+    protected $beforeUpdate   = [];
+    protected $afterUpdate    = [];
+    protected $beforeFind     = [];
+    protected $afterFind      = [];
+    protected $beforeDelete   = [];
+    protected $afterDelete    = [];
+
+    // public function getListUserBanned()
+    // {
+    //     $builder = $this->table($this->table);
+    //     $builder = $builder->select('auth_groups_users.group, username.id, users.username, users.status');
+    //     $builder = $builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
+    //     $statusNotNull = 'status IS NOT NULL';
+    //     $builder = $builder->where($statusNotNull);
+
+    //     $result = $builder->get()->getResult();
+
+    //     return $result;
+    // }
 }

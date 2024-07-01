@@ -7,7 +7,7 @@
         <p>Kami memberikan solusi kepada anda sewa ruko dengan mudah menggunakan jari anda.</p>
         <div class="btn-cta">
             <a href="<?= base_url('/daftar-ruko') ?>">Lihat Ruko</a>
-            <a href="">Lokasi</a>
+            <a href="https://maps.app.goo.gl/AM5PTUGuJo6iUXNJA" target="_blank">Lokasi</a>
         </div>
     </div>
     <div class="jumbotron-img">

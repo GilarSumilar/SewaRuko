@@ -27,7 +27,9 @@
   </div>
 
   <div class="footer mt-5">
-    <p>Website ini dimiliki oleh Ruko Keisha &copy; 2024</p>
+    <article>
+      <span>Website ini dimiliki oleh Ruko Keisha &copy; 2024</span>
+    </article>
   </div>
 
   <!-- Popper and JS Bootstrap -->
